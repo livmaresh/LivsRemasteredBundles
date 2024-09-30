@@ -1,0 +1,10 @@
+{
+    "Name": "Liv's Remastered Bundles'",
+    "Author": "Liv Maresh",
+    "Version": "1.0.0",
+    "Description": "Remaster the games default and remixed bundles to add variety and challenge to your playthroughs.",
+    "UniqueID": "livmaresh.LivsRemasteredBundles",
+    "EntryDll": "LivsRemasteredBundles.dll",
+    "MinimumApiVersion": "4.0.0",
+    "UpdateKeys": []
+}
