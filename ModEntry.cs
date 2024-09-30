@@ -138,19 +138,19 @@ namespace LivsRemasteredBundles
 
         private void initUser()
         {
-            currentUser.farmName = StardewValley.Game1.player.Name;
-            currentUser.farmerName = StardewValley.Game1.player.farmName.Value;
+            this.currentUser.farmName = StardewValley.Game1.player.Name;
+            this.currentUser.farmerName = StardewValley.Game1.player.farmName.Value;
 
             var type = StardewValley.Game1.bundleType.ToString();
 
-            if (type == "Remixed" && currentUser.bundleType == "Remastered") currentUser.bundleType = "Remixed Remastered";
-            else if (type == "Remixed" && currentUser.bundleType == "Ultra Remastered") currentUser.bundleType = "Ultra Remixed Remastered";
+            if (type == "Remixed" && this.currentUser.bundleType == "Remastered") this.currentUser.bundleType = "Remixed Remastered";
+            else if (type == "Remixed" && this.currentUser.bundleType == "Ultra Remastered") this.currentUser.bundleType = "Ultra Remixed Remastered";
 
-            Helper.Data.WriteJsonFile<CurrentUser>("CurrentUser.json", currentUser);
+            Helper.Data.WriteJsonFile<CurrentUser>("CurrentUser.json", this.currentUser);
             initBundles();
-            Helper.Data.WriteJsonFile<BundleData>("BundleData.json", bundles);
+            Helper.Data.WriteJsonFile<BundleData>("BundleData.json", this.bundles);
 
-            StardewValley.Game1.chatBox.addMessage("[LRB]: Welcome to Liv's Remastered Bundles! You currently have your Bundle type set to " + currentUser.bundleType + ". If you wish to view the bundle types and how to change them, consult the README.", new Microsoft.Xna.Framework.Color(255, 255, 255));
+            StardewValley.Game1.chatBox.addMessage("[LRB]: Welcome to Liv's Remastered Bundles! You currently have your Bundle type set to " + this.currentUser.bundleType + ". If you wish to view the bundle types and how to change them, consult the README.", new Microsoft.Xna.Framework.Color(255, 255, 255));
         }
 
         private void initBundles()
